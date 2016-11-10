@@ -20,8 +20,8 @@ public class AptPersonCount {
 			{
 				for(int j=0; j<apt[i].length; j++)
 				{
-					System.out.print((i+1)+0+(j+1) +"호에 살고 있는 사람의 숫자 :  ");
-					input = su.nextLine();
+					System.out.print((i+1)+"0"+(j+1)+"호에 살고 있는 인원 수 :  ");
+					input = su.next();
 					
 					if(!input.matches("^[0-9]*$"))		
 					{
@@ -32,13 +32,15 @@ public class AptPersonCount {
 				}
 			}
 			
-			int apt2 [][]= new int [apt.length][apt.length];
-			for(int i=0; i<apt.length; i++)
+			int apt2 [][]= new int [5][3];
+			for(int i=0; i<apt2.length; i++)
 			{
-				for(int j=0; j<apt[i].length; j++)
+				for(int j=0; j<apt2[i].length; j++)
 				{
 					apt2[i][j] = Integer.parseInt(apt[i][j]);
+					System.out.print(apt2[i][j] + " ");
 				}
+				System.out.println(" ");
 			}
 
 		su.close();
