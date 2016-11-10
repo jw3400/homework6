@@ -7,7 +7,7 @@ public class ExamVariousArray {
 	public static void main(String[] args) {
 		
 		System.out.println("****************************************");
-		System.out.println("****************배열 사용하기****************");
+		System.out.println("**************배열 사용하기**************");
 		System.out.println("****************************************");
 		System.out.println("  1.두 번째로 큰 수 찾기");
 		System.out.println("  2.심사 점수 계산");
@@ -15,6 +15,7 @@ public class ExamVariousArray {
 		System.out.println("  4.5층 아파트의 거주자 숫자 구하기");
 		System.out.println("  5.겹치지 않는 숫자 10개 입력받기");
 		System.out.println("  6.종료하기");
+		System.out.println("****************************************");
 		
 		new ExamVariousArray().input();
 	}
@@ -22,6 +23,7 @@ public class ExamVariousArray {
 	public void input() {
 	while(true) {
 		Scanner su = new Scanner(System.in);
+		System.out.print("원하는 메뉴는 무엇입니까? >>> ");
 		String select = su.nextLine();
 		
 		if(!select.matches("^[0-9]*$"))		//숫자가 아닌 다른 것을 입력하였을 때의 정규표현식 사용
@@ -54,10 +56,12 @@ public class ExamVariousArray {
 			break;
 			
 		case 6:
+			System.out.println("종료합니다.");
 			System.exit(0);
 			
 		default:
 			System.out.println("0~6 사이에 입력하셔야 합니다. 다시 입력하십시오.");
+			continue;
 			
 		}
 		
