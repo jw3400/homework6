@@ -73,7 +73,7 @@ public class StudentScore {
     			per_sum += subject[j][k];
     			per_avg = per_sum / 3;
     		}
-    		System.out.println((j+1)+"번 학생의 총점은 " + per_sum + "점, 평균은 " +  String.format("%.1f" ,per_avg) +"점 입니다." );
+    		System.out.println((j+1)+"번 학생의 총점은 " + String.format("%.0f",per_sum) + "점, 평균은 " +  String.format("%.1f" ,per_avg) +"점 입니다." );
     	} 
 
 		su.close();
