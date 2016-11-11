@@ -62,7 +62,7 @@ public class SecondMax {
 					index= j;
 				}
 			}
-		System.out.println("두번째로 큰 수는 " + (index+1) + "번째 수 " + two_max + "입니다.");
+		System.out.println("두번째로 큰 수는 " + index + "번째 수 " + two_max + "입니다.");
 		
 		su.close();
 		System.exit(0);
