@@ -13,16 +13,13 @@ public class OnlyNumber {
 		Scanner su = new Scanner(System.in);
 		int [] num = new int [10];
 		String input = null;
-		boolean check=false;
+
 		
 		int i = 1;
-		while(true)
-		{
-			if(i<10)
-			{
+		while(i<11)
+		{	
 				System.out.print(i+"번째 숫자 입력 : ");
-				input = su.nextLine();
-				i++;
+				input = su.next();
 								
 				if(!input.matches("^[0-9]*$"))		
 				{
@@ -38,31 +35,26 @@ public class OnlyNumber {
 			
 				num[i-1] = Integer.parseInt(input);
 			
-				for(int j=0; j<i-1; j++)
+				int j=0;
+				while(j<i-1)
 				{
 					if(num[i-1] == num[j])
 					{
-						System.out.println("잘못 입력하셨습니다. 다시 입력하세요.");
-						check = true;
+						System.out.println("잘못 입력하셨습니다. 다시 입력하세요.");		
+						i--;
 						break;
-					}	
+					}								
+					j++;
 				}
-				
-				if(check==false)
-					continue;
-				
-				
-			}
-		
+				i++;
+		}		
+		su.close();	
 		
 		System.out.println("===================================");			
-			for(int j=9; j>=0; j--)
-			{
-				System.out.println((j+1)+" 번째 숫자는  " +num[j]+"입니다." );
-			}
-		su.close();	
+		for(int j=9; j>=0; j--)
+		{
+			System.out.println((j+1)+" 번째 숫자는  " +num[j]+"입니다." );
+		}
 		System.exit(0);	
-		}		
-		
 	}
 }
