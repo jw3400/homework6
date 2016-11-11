@@ -13,6 +13,7 @@ public class SecondMax {
 		Scanner su = new Scanner(System.in);
 		String [] num = new String[10];
 		int  index;
+
 		int i = 0;
 			while ( i<num.length) 
 			{
@@ -58,7 +59,7 @@ public class SecondMax {
 				else if(one_max > num2[j] && two_max < num2[j] )
 				{
 					two_max  = num2[j];
-					index = j;
+					index= j;
 				}
 			}
 		System.out.println("두번째로 큰 수는 " + (index+1) + "번째 수 " + two_max + "입니다.");
